@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --bg-obsidian: #0f131c;
+  --bg-surface: #16161e;
+  --bg-elevated: #1f222e;
+
+  --brand-gold: #D4AF37;
+  --brand-gold-light: #F3CA52;
+  --brand-gold-muted: #8A6D1F;
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-subtle: #262936;
+  --status-success: #10B981;
+  --status-warning: #F59E0B;
+  --status-danger: #EF4444;
+}
+
+@theme inline {
+  --color-background: var(--bg-obsidian);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+
+  --color-brand: var(--brand-gold);
+  --color-brand-light: var(--brand-gold-light);
+  --color-brand-muted: var(--brand-gold-muted);
+
+  --color-foreground: var(--text-primary);
+  --color-muted: var(--text-secondary);
+  --color-subtle: var(--border-subtle);
+
+  --color-success: var(--status-success);
+  --color-warning: var(--status-warning);
+  --color-danger: var(--status-danger);
+
+  --font-display: var(--font-oswald), sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-obsidian);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+}
+
+@utility glass-obsidian {
+  background-color: rgba(15, 19, 28, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@utility esports-grid-bg {
+  background-color: #0f131c;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 55%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+}
+
+@utility esports-card-glow {
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.12), 0 16px 36px -12px rgba(0, 0, 0, 0.65);
+}
